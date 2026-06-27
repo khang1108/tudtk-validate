@@ -1,24 +1,24 @@
-# Python Script to Validate Your Results when Solving Final Exam of Applied Math
+# Python Script to Validate Your Results When Solving the Applied Math Final Exam
 
-It's just a simple project that I made to validate my results when I solved the **Final Exam of Applied Math** at **Ho Chi Minh University of Science  - VNUHCM** using Python and Sympy. 
+This is a simple project I made to validate my results while solving the **Applied Math Final Exam** at **Ho Chi Minh University of Science - VNUHCM** using Python and SymPy.
 
 # Overview
 
-Here is the matrix of final exam
+Here is the structure of the final exam:
 
 ```text
-Question 1: Evaluate convexity of the given function.
-	In this question, you will be given a multi-variables function and required to evaluate its convexity using Matrix knowledge and find the global maximum or minimum if have. 
+Question 1: Evaluate the convexity of the given function.
+	In this question, you will be given a multivariable function and asked to evaluate its convexity using matrix methods, then find the global maximum or minimum if one exists.
 
     Solution:
-    	1: find the ∇ of the function
-        2: find the Hessian matrix
-        3: Using Hessian matrix |H - Iλ| = 0 to find eigenvalues
+    	1: Find the gradient ∇f of the function
+        2: Find the Hessian matrix
+        3: Use the Hessian matrix and solve |H - Iλ| = 0 to find the eigenvalues
         4: Check all eigenvalues:
             - If all of them are greater than 0 -> strictly convex
-            - If all of them are greater or equal to 0 -> semi-strictly convex
-            - If all of them are lower than 0 -> strictly convae
-            - If all of them are lower or equal to 0 -> semi-strictly convae
+            - If all of them are greater than or equal to 0 -> convex
+            - If all of them are less than 0 -> strictly concave
+            - If all of them are less than or equal to 0 -> concave
         5: Solve ∇f = 0 to find the critical point
 ```
 #### Validate Question 1
@@ -26,3 +26,5 @@ Question 1: Evaluate convexity of the given function.
 ```shell
 python convex_global_max_min.py
 ```
+
+You will be asked to enter the `number of variables` and the `function` (for example: `3*x**2`, `2*y**2`, etc.).
